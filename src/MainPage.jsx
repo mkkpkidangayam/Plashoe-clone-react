@@ -12,16 +12,13 @@ import Contact from "./Pages/Contact";
 import Cart from "./Pages/Cart";
 import Login from "./Pages/Login";
 import Registration from "./Pages/Registration";
-import Catogary from "./Components/Catogary";
 import ProductData from "./Components/ProductData";
 import dataHandling from "./UserContext/UserContext";
-import Payment from "./Pages/Payment";
 import UsersData from "./Components/UserData";
 import PaymentPage from "./Pages/Payment2";
 import AdminPage from "./Components/Admin panel/AdminPage";
 import Users from "./Components/Admin panel/Users";
 import Product from "./Components/Admin panel/Product";
-import Revenue from "./Components/Admin panel/Revenue";
 import AdminLogin from "./Components/Admin panel/AdminLogin";
 import AdminLayout from "./Components/Admin panel/layout/AdminLayout";
 import AdminHome from "./Components/Admin panel/AdminHome";
@@ -68,11 +65,9 @@ function MainPage() {
             <Route path="/ourstory" element={<OurStory />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/catogary" element={<Catogary />} />
             <Route path="/payment" element={<PaymentPage />} />
           </Route>
           <Route path="/login" element={<Login />} />
-
           <Route path="/registration" element={<Registration />} />
           <Route path="/adminlogin" element={<AdminLayout />}>
             <Route index element={<AdminLogin />} />

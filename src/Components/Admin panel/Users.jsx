@@ -6,19 +6,21 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import UsersData from "../UserData";
 import dataHandling from "../../UserContext/UserContext";
 
 export default function DenseTable() {
-  const { userData, username, setUsername } = useContext(dataHandling);
+  const { userData } = useContext(dataHandling);
 
-  const [data, setData] = React.useState(UsersData);
   return (
-    <div className="">
+    <div className="container">
       <TableContainer component={Paper}>
         <div>
           <h1
-            style={{ textAlign: "center",color:'rgb(110,112,81)', backgroundColor: "ButtonHighlight" }}
+            style={{
+              textAlign: "center",
+              color: "rgb(110,112,81)",
+              backgroundColor: "ButtonHighlight",
+            }}
           >
             Users
           </h1>
@@ -43,19 +45,16 @@ export default function DenseTable() {
           </TableHead>
           <TableBody>
             {userData.map((value, index) => {
-              const { name, email, username, id } = value;
+              const { name, email, username } = value;
               return (
                 <TableRow
-                  key={userData.id}
+                  key={value.id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  {/* <TableCell component="th" scope="row">
-                {userData.}
-              </TableCell> */}
                   <TableCell align="left">{index + 1}</TableCell>
-                  <TableCell align="">{name}</TableCell>
-                  <TableCell align="">{email}</TableCell>
-                  <TableCell align="">{username}</TableCell>
+                  <TableCell align="left">{name}</TableCell>
+                  <TableCell align="left">{email}</TableCell>
+                  <TableCell align="left">{username}</TableCell>
                 </TableRow>
               );
             })}

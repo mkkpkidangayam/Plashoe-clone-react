@@ -12,7 +12,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 function NavBar() {
   const navigate = useNavigate()
-  const {search, setSearch,cart, username,setLog,setUsername} = useContext(dataHandling)
+  const { setSearch, cart, username, setLog, setUsername} = useContext(dataHandling)
 
  console.log(cart.length);
  const handleLogout = () => {
@@ -45,9 +45,10 @@ function NavBar() {
                   <Link to={'/collection'}><li>COLLECTION</li></Link>
                   <Link to={'/lookbook'}><li>LOOKBOOK</li></Link>
                   <Link to={'/sale'}><li>SALE</li></Link>            
+                  <input onClick={()=> navigate('/collection')} onChange={(e)=>setSearch(e.target.value)} className="search-box bg-light" type="text" placeholder="Search items" />
+                  <span><SearchIcon /></span>
                 </ul>
           </div>
-                  <input onClick={()=> navigate('/collection')} onChange={(e)=>setSearch(e.target.value)} className="search-box bg-light" type="text" placeholder="Search items" />
           
           <div className="navbar-right">
               <ul>

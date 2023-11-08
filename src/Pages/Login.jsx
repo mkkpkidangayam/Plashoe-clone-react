@@ -7,7 +7,7 @@ import { Button } from "react-bootstrap";
 function Login() {
   const Navigate = useNavigate();
   const { userData, username, setUsername } = useContext(dataHandling);
-  const { log, setLog } = useContext(dataHandling);
+  const { setLog } = useContext(dataHandling);
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
