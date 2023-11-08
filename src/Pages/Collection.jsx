@@ -57,7 +57,7 @@ const AddtoCart = (val) => {
               const { name, image, price, id } = value;
 
               return (
-                <Card style={{ width: "22rem", margin:'20px'}}>
+                <Card key={id} style={{ width: "22rem", margin:'20px'}}>
                   <Card.Img variant="top" src={image} />
                   <Card.Body>
                     <Card.Title>{name}</Card.Title>
