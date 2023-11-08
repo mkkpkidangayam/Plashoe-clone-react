@@ -69,7 +69,7 @@ const AddtoCart = (val) => {
                   <Card.Body>
 
                     <Button onClick={() => navigate('/payment')} className="float-start">Buy Now</Button>
-                    <Button  onClick={()=>AddtoCart(value)} className="float-end"> Add to Cart</Button>
+                    <Button  onClick={()=> AddtoCart(value)} className="float-end"> Add to Cart</Button>
                   </Card.Body>
                 </Card>
               );
