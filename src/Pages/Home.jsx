@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import Men from "./Men";
 import Collections from "./Collection";
 
 function Home() {
