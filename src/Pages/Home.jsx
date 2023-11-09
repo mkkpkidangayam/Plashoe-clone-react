@@ -6,7 +6,7 @@ function Home() {
   return (
     <div  style={{ backgroundColor: "rgb(241,241,239)" }}>
       <div className="home">
-        <h1 className="text-light">PLASHOE</h1>
+        
       </div>
       <div className="container">
       <hr />
