@@ -15,7 +15,7 @@ import Registration from "./Pages/Registration";
 import ProductData from "./Components/ProductData";
 import dataHandling from "./UserContext/UserContext";
 import UsersData from "./Components/UserData";
-import PaymentPage from "./Pages/Payment2";
+import PaymentPage from "./Pages/PaymentPage";
 import AdminPage from "./Components/Admin panel/AdminPage";
 import Users from "./Components/Admin panel/Users";
 import Product from "./Components/Admin panel/Product";
@@ -63,8 +63,8 @@ function MainPage() {
             <Route path="/ourstory" element={<OurStory />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/payment" element={<PaymentPage />} />
           </Route>
+          <Route path="/payment" element={<PaymentPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/adminlogin" element={<AdminLayout />}>

@@ -221,30 +221,6 @@ function Registration() {
                         Already have an account?
                         <Link to="/login"> Login</Link>
                       </p>
-                      <button
-                        type="button"
-                        className="btn btn-link btn-floating mx-1"
-                      >
-                        <i className="fab fa-facebook-f" />
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-link btn-floating mx-1"
-                      >
-                        <i className="fab fa-google" />
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-link btn-floating mx-1"
-                      >
-                        <i className="fab fa-twitter" />
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-link btn-floating mx-1"
-                      >
-                        <i className="fab fa-github" />
-                      </button>
                     </div>
                   </form>
                 </div>
