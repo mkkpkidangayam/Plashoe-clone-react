@@ -11,12 +11,17 @@ function Collection() {
   const { search, data, cart, setCart } = useContext(dataHandling);
   const [proData, setProdata] = useState(data);
 
-  const searchFilter = useCallback((itemname) => {
-    const result = itemname.filter((val) => {
-      return search === "" ? val : val.name.toLowerCase().includes(search.toLowerCase());
-    });
-    setProdata(result);
-  }, [search]);
+  const searchFilter = useCallback(
+    (itemname) => {
+      const result = itemname.filter((val) => {
+        return search === ""
+          ? val
+          : val.name.toLowerCase().includes(search.toLowerCase());
+      });
+      setProdata(result);
+    },
+    [search]
+  );
 
   useEffect(() => {
     searchFilter(data);
@@ -27,7 +32,8 @@ function Collection() {
 
     if (itemIndex !== -1) {
       const updatedCart = [...cart];
-      updatedCart[itemIndex].quantity = (updatedCart[itemIndex].quantity || 1) + 1;
+      updatedCart[itemIndex].quantity =
+        (updatedCart[itemIndex].quantity || 1) + 1;
       setCart(updatedCart);
     } else {
       setCart([...cart, { ...val, quantity: 1 }]);
@@ -38,7 +44,9 @@ function Collection() {
     <div className="container bg-light bg-gradient">
       <div>
         <div>
-          <h1 style={{ textAlign: 'center', color: 'rgb(110,112,81)' }}>Collections</h1>
+          <h1 style={{ textAlign: "center", color: "rgb(110,112,81)" }}>
+            Collections
+          </h1>
         </div>
         <div>
           <Row className="m-5 ">
@@ -46,30 +54,40 @@ function Collection() {
               const { name, image, price, id } = value;
 
               return (
-                <Card key={id} style={{ width: "22rem", margin: '20px' }}>
+                <Card key={id} style={{ width: "22rem", margin: "20px" }}>
                   <Card.Img variant="top" src={image} />
                   <Card.Body>
                     <Card.Title>{name}</Card.Title>
                   </Card.Body>
                   <ListGroup className="list-group-flush">
-                    <ListGroup.Item style={{ fontSize: "25px", fontWeight: 'bolder', color: '#6E7051' }}>
+                    <ListGroup.Item
+                      style={{
+                        fontSize: "25px",
+                        fontWeight: "bolder",
+                        color: "#6E7051",
+                      }}
+                    >
                       ${price}
                     </ListGroup.Item>
                   </ListGroup>
                   <Card.Body>
-                    <Button onClick={() => navigate('/payment')} className="float-start">
+                    <Button
+                      onClick={() => navigate("/payment")}
+                      className="float-start"
+                    >
                       Buy Now
                     </Button>
-                    <Button onClick={() => AddtoCart(value)} className="float-end">
+                    <Button
+                      onClick={() => AddtoCart(value)}
+                      className="float-end"
+                    >
                       Add to Cart
                     </Button>
                   </Card.Body>
                 </Card>
               );
             })}
-
-
-+3          </Row>
+          </Row>
         </div>
       </div>
     </div>
