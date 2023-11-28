@@ -67,7 +67,9 @@ function Collection() {
                 </Card>
               );
             })}
-          </Row>
+
+
++3          </Row>
         </div>
       </div>
     </div>

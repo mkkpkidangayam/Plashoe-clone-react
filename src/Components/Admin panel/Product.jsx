@@ -41,11 +41,19 @@ function Product() {
   };
 
   const handleAddProductSubmit = () => {
-    const newId = data.length + 1; // Generate a new ID for the product
-    setNewProduct({ ...newProduct, id: newId });
-    setData((prevData) => [...prevData, newProduct]);
-    setNewProduct({ name: "", price: "", image: "", type: "men" });
-    setShowAddProductModal(false);
+    if (!newProduct.name || !newProduct.price || !newProduct.image) {
+      alert("Please fill in all the required fields (Name, Price, Image).");
+      
+    }else{
+      const newId = data.length + 1; // Generate a new ID for the product
+      setNewProduct({ ...newProduct, id: newId });
+      setData((prevData) => [...prevData, newProduct]);
+      setNewProduct({ name: "", price: "", image: "", type: "men" });
+      setShowAddProductModal(false);
+    }
+     
+    
+   
   };
 
   return (

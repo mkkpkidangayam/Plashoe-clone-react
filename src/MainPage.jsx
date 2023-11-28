@@ -25,14 +25,12 @@ import AdminHome from "./Components/Admin panel/AdminHome";
 
 function MainPage() {
   const [search, setSearch] = useState("");
-
   const [cart, setCart] = useState([]);
   const [data, setData] = useState(ProductData);
   const [log, setLog] = useState("");
   const [userData, setUserData] = useState(UsersData);
   const [Price, totalPrice] = useState(null);
   const [username, setUsername] = useState("");
-  console.log(data);
 
   const details = {
     data,

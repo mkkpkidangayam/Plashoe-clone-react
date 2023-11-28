@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import "./Registration.css";
 import { Link, useNavigate } from "react-router-dom";
 import dataHandling from "../UserContext/UserContext";
 
