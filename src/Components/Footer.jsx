@@ -9,6 +9,7 @@ export default function Footer() {
         <Link style={{textDecoration:'none'}} to={'/'}>
         <p style={{color:'#4F352A',fontWeight:'bold'}}>PLASHOE.COM</p>
         </Link>
+        <p><a target='instagram' href="https://mkkpkidangayam.github.io/MKKP-Portfolio/" style={{textDecoration:'none',color:'black'}}>by: MKKP kidangayam</a></p>
       </footer>
     </div>
     

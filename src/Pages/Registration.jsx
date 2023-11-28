@@ -64,10 +64,8 @@ function Registration() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      console.log("Form data:", formData);
       userHandler();
       navigate("/login");
-      console.log(userData);
     }
   };
 
