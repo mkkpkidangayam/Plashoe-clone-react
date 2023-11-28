@@ -43,7 +43,7 @@ const PaymentForm = () => {
       </div>
       <div
         style={{
-          height: "45vw",
+          height: "50rem",
           backgroundColor: "#2B185b",
           display: "flex",
           justifyContent: "center",
