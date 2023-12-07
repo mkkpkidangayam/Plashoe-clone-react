@@ -40,7 +40,7 @@ function Login() {
           backgroundImage: `url(https://img.freepik.com/premium-photo/close-up-shot-rack-shoes-high-end-shoe-store-generative-ai_697880-6291.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696982400&semt=ais)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "100%",
-          height:'100%'
+          height: "100%",
         }}
       >
         <style
@@ -153,24 +153,6 @@ function Login() {
                           Admin
                         </Button>
                       </div>
-                      <button
-                        type="button"
-                        className="btn btn-link btn-floating mx-1"
-                      >
-                        <i className="fab fa-google" />
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-link btn-floating mx-1"
-                      >
-                        <i className="fab fa-twitter" />
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-link btn-floating mx-1"
-                      >
-                        <i className="fab fa-github" />
-                      </button>
                     </div>
                   </form>
                 </div>

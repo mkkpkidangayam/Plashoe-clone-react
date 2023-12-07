@@ -45,7 +45,7 @@ function Product() {
       alert("Please fill in all the required fields (Name, Price, Image).");
       
     }else{
-      const newId = data.length + 1; // Generate a new ID for the product
+      const newId = data.length + 1; 
       setNewProduct({ ...newProduct, id: newId });
       setData((prevData) => [...prevData, newProduct]);
       setNewProduct({ name: "", price: "", image: "", type: "men" });

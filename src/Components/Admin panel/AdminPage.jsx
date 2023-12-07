@@ -20,7 +20,7 @@ function AdminPage() {
         <h3>{admin.name}</h3>
         
         <p style={{color:'rgb(15,90,120)'}}>_____________</p>
-        {/* <hr /> */}
+        
         <div>
           <Link to={"users"}>
             <li>
